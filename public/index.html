@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title><%= VUE_APP_TITLE  %></title>
+    <style>
+      html, body, #app { height: 100%; margin: 0px; padding: 0px; }
+      .admin-home { background-color: #303133; height: 100%; display: flex; flex-direction: column; }
+      .admin-home__main { user-select: none; width: 100%; flex-grow: 1; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+      .admin-home__footer { width: 100%; flex-grow: 0; text-align: center; padding: 1em 0; }
+      .admin-home__footer > a { font-size: 12px; color: #ABABAB; text-decoration: none; }
+      .admin-home__loading { height: 32px; width: 32px; margin-bottom: 20px; }
+      .admin-home__title { color: #FFF; font-size: 14px; margin-bottom: 10px; }
+      .admin-home__sub-title { color: #ABABAB; font-size: 12px; }
+    </style>
+    <!-- 使用CDN的CSS文件 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.css) { %>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" />
+    <% } %>
+
+    <!-- 使用CDN的JS文件 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js) { %>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+    <% } %>
+    <script type="text/javascript" src="//webapi.amap.com/maps?v=2.0&key=e6e59f145ed58ec094f6666e9cd36ed2&plugin=AMap.ToolBar"></script>
+    <script type="text/javascript" src="//webapi.amap.com/ui/1.1/main.js?v=1.0.11"></script>
+    <script type="text/javascript" src=<%= VUE_APP_URL %>/tinymce4.7.5/tinymce.min.js></script>
+    <!-- baidu map -->
+    <!-- <script type="text/javascript" src="//api.map.baidu.com/api??v=2.0&ak=uzMdOehOj94huBKKo2bCZv8V7Ebx3HU3"></script> -->
+      <!-- uzMdOehOj94huBKKo2bCZv8V7Ebx3HU3 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=lptkecSFaQ3Ltxuc6OqzsIkBXOWZMkKm"></script>
+    <!--加载鼠标绘制工具-->
+    <script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2073042_ew18m4vt2ra.css">
+</script>
+  </head>
+  <body>
+    <noscript>
+      <strong>很抱歉，如果没有 JavaScript 支持，Admin 将不能正常工作。请启用浏览器的 JavaScript 然后继续。</strong>
+    </noscript>
+    <div id="app">
+      <div class="admin-home">
+        <div class="admin-home__main">
+          <img
+            class="admin-home__loading"
+            src="<%= VUE_APP_URL %>/images/loading-spin.svg"
+            alt="loading">
+          <div class="admin-home__title">正在加载资源</div>
+          <div class="admin-home__sub-title">初次加载资源可能需要较多时间 请耐心等待</div>
+        </div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

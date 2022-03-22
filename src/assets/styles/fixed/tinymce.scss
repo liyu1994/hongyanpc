@@ -1,0 +1,20 @@
+// 文本编辑器
+
+.mce-panel {
+  border: 1px solid $color-border-2 !important;
+  border-bottom: none !important;
+  .mce-panel {
+    border: none !important;
+    border-bottom: 1px solid $color-border-2 !important;
+  }
+}
+.mce-menubar {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid $color-border-2 !important;
+  padding-bottom: 1px !important;
+}
+.mce-top-part::before {
+  box-shadow: none !important;
+}

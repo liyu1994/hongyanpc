@@ -1,0 +1,109 @@
+// 主题名称
+$theme-name: 'hszt';
+$primary: #2b63b8;
+// 主题背景颜色
+$theme-bg-color: #ccc;
+// 主题头部颜色
+//$theme-header-color: linear-gradient(90deg, #D74F47 0%, #D74E46 100%);
+$theme-header-color: $primary;
+// 主题背景图片遮罩
+$theme-bg-mask: rgba(#000, .3);
+
+// container组件
+$theme-container-background-color: rgba(#FFF, .85);
+$theme-container-header-footer-background-color: #FFF;
+$theme-container-border-inner: 1px solid $color-border-1;
+$theme-container-border-outer: none;
+
+$theme-multiple-page-control-color: #FFF;
+$theme-multiple-page-control-color-active: $color-text-normal;
+$theme-multiple-page-control-nav-prev-color: #FFF;
+$theme-multiple-page-control-nav-next-color: #FFF;
+$theme-multiple-page-control-border-color: transparent;
+$theme-multiple-page-control-border-color-active: #FFF;
+$theme-multiple-page-control-color-active:$primary;
+$theme-multiple-page-control-background-color: rgba(#FFF, .2);
+//$theme-multiple-page-control-background-color: rgba(#FFF, .5);
+$theme-multiple-page-control-background-color-active: #FFF;
+$theme-multiple-page-control-border-color-new: #2b63b8;
+
+$theme-multiple-page-control-icon-color: #FFF;
+$theme-multiple-page-control-icon-active: $color-text-sub;
+
+// 顶栏和侧边栏中展开的菜单 hover 状态下
+$theme-menu-item-color-hover: #293849;
+$theme-menu-item-background-color-hover: #ecf5ff;
+
+// 顶栏上的文字颜色
+$theme-header-item-color: #FFF;
+$theme-header-item-background-color: transparent;
+$theme-header-btn-color: #2b63b8;
+// 顶栏上的项目在 hover 时
+$theme-header-item-color-hover: #FFF;
+$theme-header-item-background-color-hover: rgba(#000, 1);
+// 顶栏上的项目在 focus 时
+$theme-header-item-color-focus: #FFF;
+$theme-header-item-background-color-focus: rgba(#000, 1);
+// 顶栏上的项目在 active 时
+$theme-header-item-color-active: #FFF;
+$theme-header-item-background-color-active: rgba(#000, 1);
+
+// 侧边栏上的文字颜色
+$theme-aside-item-color: #333333;
+$theme-aside-item-last-color: rgba(51, 51, 51, 0.65);
+$theme-aside-item-i-color: #999999;
+$theme-aside-item-icon-color: #2b63b8;
+$theme-aside-item-icon-color-right: #999999;
+$theme-aside-item-background-color: #2059F7;
+// 侧边栏上的项目在 hover 时
+$theme-aside-item-color-hover: #2b63b8;
+$theme-aside-item-background-color-hover: rgba(#2059F7, 1);
+// 侧边栏上的项目在 focus 时
+$theme-aside-item-color-focus: #2b63b8;
+$theme-aside-item-background-color-focus: rgba(#2059F7, 1);
+// 侧边栏上的项目在 active 时
+$theme-aside-item-color-active: #2b63b8;
+$theme-aside-item-background-color-active: rgba(#2059F7, 1);
+
+// 侧边栏菜单为空的时候显示的元素
+$theme-aside-background-color: #2059F7;
+$theme-aside-menu-empty-icon-color: #FFF;
+$theme-aside-menu-empty-text-color: #FFF;
+$theme-aside-menu-empty-background-color: rgba(#2059F7, 1);
+$theme-aside-menu-empty-icon-color-hover: #FFF;
+$theme-aside-menu-empty-text-color-hover: #FFF;
+$theme-aside-menu-empty-background-color-hover: rgba(#FFF, 1);
+
+//element-ui主色
+$--color-white: #fff;
+$--color-primary: $primary;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%);
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%);
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%);
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%);
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%);
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%);
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%);
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%);
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%);
+
+.theme-hszt{
+  .el-menu{
+    .el-submenu{
+      .el-menu-item{
+        color: #fff!important;
+        &:hover,
+        &.is-active{
+          // color:#2b63b8!important;
+        }
+      }
+    }
+    .el-menu-item{
+      color:#fff!important;
+      &:hover,
+      &.is-active{
+        // color:#2b63b8!important;
+      }
+    }
+  }  
+} 

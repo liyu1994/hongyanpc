@@ -1,0 +1,17 @@
+# 忽略目录
+build/
+node_modules/
+src/assets
+src/views/layout/components/AppImComponents
+src/libs/*.sjcl.js
+src/libs/coordtransform.js
+src/plugin/lodop/index.js
+public
+dist
+
+# node 覆盖率文件
+coverage/
+
+# 忽略文件
+**/*-min.js
+**/*.min.js

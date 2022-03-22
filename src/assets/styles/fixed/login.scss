@@ -1,0 +1,383 @@
+$backgroundColor:#CEE8FF;
+$light_gray:#6B7689;
+$dark_gray:#889aa4;
+.page-login {
+  // @extend %unable-select;
+  // ---
+  min-height: 620px;
+  min-width: 1200px;
+  background-color: $backgroundColor;
+  background-image: url(~@/assets/imgs/bg_login@2x.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  height: 100%;
+  position: relative;
+  // 层
+  .page-login--layer {
+    @extend %full;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    .system-name {
+      position: absolute;
+      color: #353535;
+      font-size: 28px;
+      margin-left: 13%;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+    .system-name::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 20px;
+      background-color: #98A8B8;
+      position: absolute;
+      left: -10px;
+      top: 6px;
+    }
+  }
+  .page-login--layer-area {
+    overflow: hidden;
+  }
+  // 时间
+  .page-login--layer-time {
+    font-size: 24em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  // footer
+  // .page-login--content-footer {
+  //   padding: 1em 0;
+  //   text-align: center;
+  //   color: #EEE;
+  //   .page-login--content-footer-options {
+  //     padding: 0px;
+  //     margin: 0px;
+  //     margin-bottom: 15px;
+  //     font-size: 12px;
+  //     a {
+  //       color: #EEE;
+  //       margin: 0 10px 0 8px;
+  //     }
+  //   }
+  //   .page-login--content-footer-copyright {
+  //     padding: 0px;
+  //     margin: 0px;
+  //     font-size: 12px;
+  //     a {
+  //       color: #EEE;
+  //     }
+  //   }
+  // }
+  // 登陆页面控件的容器
+  .page-login--content {
+    height: 100%;
+    min-height: 620px;
+  }
+  // header
+  .page-login--content-header {
+    // padding: 1em 0;
+  }
+  // 背景
+  .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(#fff, 0.03);
+      animation: animate 25s linear infinite;
+      bottom: -200px;
+      @keyframes animate {
+        0%{
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+          border-radius: 0;
+        }
+        100%{
+          transform: translateY(-1000px) rotate(720deg);
+          opacity: 0;
+          border-radius: 50%;
+        }
+      }
+      &:nth-child(1) {
+        left: 15%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        left: 5%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+      }
+      &:nth-child(3) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+      }
+      &:nth-child(4) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+      }
+      &:nth-child(5) {
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+      }
+      &:nth-child(6) {
+        left: 75%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 3s;
+      }
+      &:nth-child(7) {
+        left: 35%;
+        width: 200px;
+        height: 200px;
+        animation-delay: 7s;
+      }
+      &:nth-child(8) {
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        animation-delay: 15s;
+        animation-duration: 45s;
+      }
+      &:nth-child(9) {
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+      }
+      &:nth-child(10) {
+        left: 85%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 0s;
+        animation-duration: 11s;
+      }
+    }
+  }
+}
+
+/* reset element-ui css */
+.login-container {
+  .link-type {
+    font-size: 14px;
+    float: left;
+    // margin: 0 0 20px;
+  }
+  .lang {
+    font-size: 18px;
+    float: right;
+    .admin-mr {
+      margin-right: 0px !important;
+    }
+  }
+  .login-form {
+    // width: 400px;
+    // background-color: #FFFFFF;
+    background-image: url(~@/assets/imgs/img_picture_login@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 914px !important;
+    height: 490px !important;
+    position: relative;
+    .login-box {
+      width: 320px;
+      position: absolute;
+      top: 69px;
+      right: 82px;
+      .text-container {
+        font-size: 14px;
+        color: #323233;
+        padding-right: 10px;
+        // line-height: 24px;
+        display: inline-block;
+      }
+      .el-form-item__error {
+        left: 10px;
+        top: 70%;
+      }
+      .title-container {
+        position: relative;
+        margin-bottom: 0px;
+        overflow: hidden;
+        .logo {
+          height: 78px;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .title {
+          font-size: 26px;
+          font-weight: 300;
+          color: $light_gray;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+      .show-pwd {
+        position: absolute;
+        right: 10px;
+        font-size: 16px;
+        color: $dark_gray;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+    .psw-box {
+      width: 350px;
+      position: absolute;
+      top: 38px;
+      right: 82px;
+      .text-container {
+        font-size: 14px;
+        width: 72px;
+        text-align: right;
+        color: #323233;
+        padding-right: 10px;
+        // line-height: 24px;
+        display: inline-block;
+      }
+      .el-form-item__error {
+        left: 10px;
+        top: 70%;
+      }
+      .title-container {
+        position: relative;
+        margin-top: 50px;
+        overflow: hidden;
+        .title {
+          font-size: 26px;
+          font-weight: 300;
+          color: $light_gray;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+      .link-type {
+        float: right;
+      }
+      .code {
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        font-size: 14px;
+        // color: $dark_gray;
+        // color: #d33a31;
+        // cursor: pointer;
+        user-select: none;
+      }
+      .show-pwd {
+        position: absolute;
+        right: 10px;
+        font-size: 16px;
+        color: $dark_gray;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+  }
+  .el-input {
+    display: inline-block;
+    height: 47px;
+    line-height: 47px;
+    // width: 75%;
+    input {
+      background: transparent;
+      border: 0px;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      // padding: 12px 5px 12px 15px;
+      color: $light_gray;
+      height: 47px;
+      line-height: 47px;
+      &:-webkit-autofill {
+        //-webkit-box-shadow: 0 0 0px 1000px $backgroundColor inset !important;
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+        -webkit-text-fill-color: red !important;
+      }
+    }
+  }
+  .el-form-item__label {
+    height: 47px;
+    line-height: 47px;
+  }
+  .el-form-item {
+    // border: 1px solid rgba(255, 255, 255, 0.1);
+    // background: rgba(0, 0, 0, 0.1);
+    // border-radius: 5px;
+    border-bottom: 1px solid #ebedf0;
+    color: #323233;
+    margin-bottom: 0px;
+    padding: 5px 0;
+    + .el-form-item {
+      /*margin-bottom: 0px;*/
+    }
+  }
+  // .login-form {
+  //   width: 400px;
+  // }
+  // @media screen and (max-width: 500px) {
+  //   .login-form {
+  //     width: 280px;
+  //   }
+  // }
+  .el-button--medium {
+    // background-color: #1abc9c;
+    // border-color: #1abc9c;
+    margin-top: 30px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 12px 20px;
+    /* &:focus, &:hover {
+      background: #48c9b0;
+      border-color: #48c9b0;
+      color: #fff;
+    }
+     &:active {
+      background: #1aad90;
+      border-color: #1aad90;
+     } */
+  }
+  .el-form-item{
+    position: relative;
+    height: 47px;
+    line-height: 47px;
+    .el-form-item__label-wrap{
+      position: absolute;
+      left: 0;
+      top: 5px;
+      height: 47px;
+      line-height: 47px;
+    }
+    .el-form-item__content{
+      height: 47px;
+      line-height: 47px;
+    }
+  }
+
+
+}
+
+::-ms-clear, ::-ms-reveal{display: none;}

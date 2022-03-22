@@ -1,0 +1,236 @@
+// 工具类名统一前缀
+$prefixCls: 'admin-drawer';
+$drag-drawer-trigger-height: 100px;
+$drag-drawer-trigger-width: 8px;
+
+.#{$prefixCls} {
+  width: auto;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  &-inner{
+    position: absolute;
+  }
+
+  &-left{
+    left: 0;
+  }
+  &-right{
+    right: 0;
+  }
+
+  &-hidden {
+    display: none !important;
+  }
+  
+  &-move{
+    @extend %full;
+    user-select: none;
+    transition: all 0.1s;
+    z-index: 10;
+  }
+    
+  &-wrap {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2001;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+
+    &-inner{
+      position: absolute;
+      overflow: hidden;
+    }
+
+    &-dragging{
+      user-select: none;
+    }
+  }
+
+  &-wrap * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(55,55,55,.6);
+    height: 100%;
+    transition: all 0.1s;
+    z-index: 2000;
+    &-inner{
+      position: absolute;
+    }
+  }
+
+  &-full {
+    /* width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    border: 0;
+    background-clip: padding-box;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15); */
+    @extend %full;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border: 0;
+    background-clip: padding-box;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    overflow: hidden;
+    &-no-mask{
+      pointer-events: auto;
+    }
+  }
+
+  &-header {
+    overflow: hidden!important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8eaec;
+    padding: 14px 16px;
+    line-height: 1;
+    // font-size: 14px;
+  }
+
+  &-close {
+    z-index: 1;
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    .el-icon-close{
+      font-size: 20px;
+      color: #999;
+      -webkit-transition: color .2s ease;
+      transition: color .2s ease;
+      position: relative;
+      top: 1px;  
+    }
+  }
+
+  &-body {
+    flex-grow: 1;
+    height: 100%;
+    padding: 16px 16px;
+    // font-size: 12px;
+    overflow: auto;
+    position: relative;
+    /* width: 100%;
+    height: calc(100vh - 51px);
+    font-size: 12px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    position: absolute;
+    overflow: auto;
+    overflow: visible;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    &-wrapper {
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      overflow: auto; 
+      position: relative;
+    } */
+  }
+  
+  &-footer {
+    padding: 14px 16px;
+    line-height: 1;
+    // font-size: 14px;
+    border-top: 1px solid #e8eaec;
+    background: #FFF;  
+  }
+
+  &-no-header &-body{
+    height: 100%;
+  }
+
+  &-no-mask{
+    pointer-events: none;
+    .#{$prefixCls}-drag{
+      pointer-events: auto;
+    }
+  }
+  
+  .#{$prefixCls}-trigger-wrapper{
+    top: 0;
+    height: 100%;
+    width: 0;
+    user-select: none;
+    .#{$prefixCls}-move-trigger{
+      position: absolute;
+      top: 50%;
+      height: $drag-drawer-trigger-height;
+      width: $drag-drawer-trigger-width;
+      background: rgb(243, 243, 243);
+      transform: translate(-50%, -50%);
+      border-radius: 4px;
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+      line-height: $drag-drawer-trigger-height;
+      cursor: col-resize;
+      &-point{
+        display: inline-block;
+        width: 50%;
+        transform: translateX(50%);
+        i{
+          display: block;
+          border-bottom: 1px solid rgb(192, 192, 192);
+          padding-bottom: 2px;
+        }
+      }
+    }
+  }
+  
+  &-drag{
+    top: 0;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    &-left{
+      right: 0;
+    }
+    &-move-trigger{
+      width: 8px;
+      height: 100px;
+      line-height: 100px;
+      position: absolute;
+      top: 50%;
+      background: rgb(243, 243, 243);
+      transform: translate(-50%, -50%);
+      border-radius: "4px / 6px";
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+      cursor: col-resize;
+      &-point{
+        display: inline-block;
+        width: 50%;
+        transform: translateX(50%);
+        i{
+          display: block;
+          border-bottom: 1px solid rgb(192, 192, 192);
+          padding-bottom: 2px;
+        }
+      }
+    }
+  }
+}

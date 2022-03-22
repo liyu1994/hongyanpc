@@ -1,0 +1,549 @@
+$primary: #d33a31;
+.admin-layout-header-aside-group {
+  .admin-layout-header-aside-content
+    .admin-theme-container
+    .admin-theme-container-main
+    .admin-theme-container-main-body
+    .container-component
+    .admin-container-full {
+    right: 0 !important;
+  }
+}
+// 头像 样式
+.userInfo-hd-warp {
+  margin: 6px 0 34px;
+  .images {
+    height: 72px;
+    width: 72px;
+  }
+  .info {
+    margin-top: 15px;
+    .name {
+      font-size: 20px;
+      color: #000;
+      font-weight: bold;
+    }
+    .account {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #999;
+      .button-Link {
+        color: #999;
+        padding: 0;
+      }
+    }
+  }
+}
+// 卡片默认表头样式
+.el-card__header {
+  padding: 0 20px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #f4f7fc;
+  border-radius: 4px 4px 0 0;
+  border-bottom: solid 1px #e9f0fb;
+  font-size: 14px;
+  font-weight: bold;
+}
+.border {
+  margin: 20px 0;
+  height: 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+.text-group {
+  height: 36px;
+  font-size: 14px;
+  .tg-label {
+    text-align: right;
+    line-height: 36px;
+    color: #333;
+  }
+  .tg-key {
+    margin-top: 10px;
+    color: #666;
+    word-break: break-all;
+  }
+}
+// 应用配置 卡片
+.appSettingWarp {
+  height: 110px;
+  &-head {
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 10px;
+    height: 26px;
+    font-size: 14px;
+    color: #333;
+    line-height: 26px;
+    .icon {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      height: 26px;
+      width: 26px;
+      img {
+        height: 26px;
+        width: 26px;
+      }
+    }
+    .admin-ar {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  &-body {
+    .info {
+      margin-top: 10px;
+      height: 60px;
+      font-size: 14px;
+      color: #999;
+    }
+    .other {
+      font-size: 12px;
+      color: #1890ff;
+    }
+  }
+}
+.app-warp {
+  border-radius: 5px;
+  &-title {
+    margin-bottom: 20px;
+    padding: 0 0 20px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #e9e9e9;
+    font-weight: bold;
+  }
+}
+// Breadcrumb 面包屑 样式重置
+.el-breadcrumb__inner {
+  color: #fff !important;
+  &.is-link,
+  a {
+    color: #999 !important;
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+// 个人中心 样式
+.user-warp {
+  &-banner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    img {
+      width: 1920px;
+      height: 220px;
+      position: absolute;
+      left: 50%;
+      margin-left: -960px;
+    }
+  }
+  &-content {
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+  &-left-panner {
+    float: left;
+    width: 230px;
+    height: 716px;
+    background: #fff;
+    .head {
+      height: 194px;
+      padding-top: 55px;
+      background: url("/static/images/userInfo/bg_orange.png") bottom center
+        no-repeat;
+      text-align: center;
+      &-portrait {
+        margin: 0 auto;
+        height: 72px;
+        width: 72px;
+      }
+      &-info {
+        margin-top: 25px;
+        color: #fff;
+        .name {
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .info {
+          font-size: 14px;
+        }
+      }
+    }
+    .menu {
+      .menuUl {
+        padding: 15px 0;
+        margin: 0;
+        .menuLi {
+          list-style: none;
+          padding: 13px 0;
+          cursor: pointer;
+          .menuBtn {
+            display: block;
+            position: relative;
+            height: 32px;
+            border-left: 3px solid #fff;
+            line-height: 32px;
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+            i {
+              margin-right: 10px;
+              color: #8a8a8a;
+            }
+          }
+          &.active,
+          &:hover {
+            background: #fafafa;
+            .menuBtn {
+              border-left: 3px solid $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-right-panner {
+    float: right;
+    width: 950px;
+    .sider-nav {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    .app-warp {
+      min-height: 647px;
+    }
+  }
+  &-center-panner {
+    width: 1200px;
+  }
+  // 新闻tabs导航
+  &-tabs {
+    width: 100%;
+    height: 42px;
+    background-color: #ffffff;
+  }
+}
+//个人中心 消息
+.message-warp {
+  padding: 10px;
+  &-head {
+    margin-bottom: 20px;
+    color: $primary;
+    font-size: 14px;
+  }
+  &-body {
+    .list {
+      padding-left: 15px;
+      margin-bottom: 20px;
+      line-height: 25px;
+      .tit {
+        color: #ccc;
+        font-size: 14px;
+        .right {
+          float: right;
+          color: #ccc;
+          font-size: 12px;
+        }
+      }
+      .info {
+        color: #ccc;
+        font-size: 12px;
+      }
+      &.unread {
+        .tit {
+          position: relative;
+          color: #444;
+          .right {
+            color: #999;
+          }
+          &:before {
+            position: absolute;
+            left: -13px;
+            top: 10px;
+            content: "";
+            height: 6px;
+            width: 6px;
+            background: $primary;
+            border-radius: 6px;
+          }
+        }
+        .info {
+          color: #999;
+        }
+      }
+    }
+  }
+  &-footer-page {
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+}
+// 新闻列表
+.news-warp {
+  background: #fff;
+  .news-warp-list {
+    padding: 29px 0;
+    border-bottom: 1px solid #e8e8e8;
+    line-height: 24px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f5faff;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    .timeBox {
+      width: 120px;
+      text-align: center;
+      align-self: center;
+      div {
+        font-size: 28px;
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+    }
+    .imgBox {
+      margin: 0 20px 0 0;
+      width: 242px;
+      height: 136px;
+      img {
+        width: 242px;
+        height: 136px;
+      }
+    }
+    .title {
+      //margin: 5px 0;
+      font-size: 16px;
+      color: #333;
+    }
+    .time {
+      color: #999;
+      font-size: 14px;
+    }
+    .info {
+      font-size: 14px;
+      color: #666;
+    }
+    .imgBox-list {
+      margin-top: 20px;
+      padding-left: 120px;
+      .imgBox {
+        float: left;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+.newDetail-warp {
+  .hd {
+    margin: 10px 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+    .title {
+      font-size: 20px;
+      color: #333;
+      line-height: 30px;
+    }
+    .time {
+      margin-top: 7px;
+      font-size: 14px;
+      color: #999;
+    }
+  }
+  .bd {
+    min-height: 100px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+    word-break: break-word;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.flex {
+  display: flex;
+  &Item {
+    flex: 1;
+  }
+}
+.control-sidebar {
+  // height: 69px;
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+  height: 29px;
+  line-height: 29px;
+  transition: width 0.28s;
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+  .leftIcon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: $theme-aside-item-icon-color;
+  }
+  .title {
+    transition: transform 0.3s;
+    // transition: all .5s;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: $theme-aside-item-color;
+  }
+  .retract,
+  .open {
+    margin: 3px 5px 0 0;
+    // float: right;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+  }
+  .rightIcon {
+    // display: block;
+    // margin: 3px 5px 0 0;
+    transition: transform 0.3s;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    // float: right;
+    color: $theme-aside-item-icon-color;
+    font-size: 18px;
+  }
+  &-hidden {
+    .leftIcon,
+    .title {
+      // display: none;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+    .rightIcon {
+      right: 28px;
+    }
+  }
+}
+// dialogCss
+.dialogCss {
+  .el-form-item {
+    margin-bottom: 20px;
+  }
+}
+
+// vue-treeselect
+.vue-treeselect {
+  .el-form-item--medium .el-form-item__content,
+  .el-form-item--medium .el-form-item__label {
+    line-height: 14px;
+  }
+}
+.vue-treeselect__control .vue-treeselect__multi-value {
+  margin-bottom: 5px;
+}
+.vue-treeselect__placeholder,
+.vue-treeselect__single-value {
+  line-height: 41px;
+}
+.vue-treeselect__icon-loader::after {
+  background: #ccc;
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+.vue-treeselect__label-container:hover .vue-treeselect__checkbox--unchecked {
+  //border-color: $color-primary;
+  background: #fff;
+}
+.vue-treeselect--has-value .vue-treeselect__multi-value {
+  line-height: 16px;
+}
+
+.el-textarea__inner {
+  padding: 5px 10px !important;
+}
+.el-select .el-input__suffix {
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+
+// Tree 树形控件
+.tree-left {
+  border: none;
+  width: 210px;
+  .admin-container-body-full {
+    padding: 10px;
+  }
+  // /deep/.el-input__inner {
+  //   height: 36px !important;
+  //   line-height: 36px !important;
+  //   border: none;
+  //   background-color: #fafafb;
+  //   border-radius: 4px !important;
+  // }
+}
+
+// 文字溢出显示省略号（…）
+.text-nowrap {
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.button-wrap {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  /deep/ .el-button {
+    margin: 0;
+    padding: 0;
+  }
+}
+// ag-grid 单元格颜色
+.ag-fresh {
+  .cell-status-orange {
+    a {
+      color: orange;
+      cursor: default;
+    }
+  }
+  .cell-status-default {
+    a {
+      color: #666;
+      cursor: default;
+    }
+  }
+}
+
+.el-form-item__content {
+  word-wrap: break-word;
+}
+
+
+.input_title {
+  /deep/ .el-input__inner {
+    padding-right: 50px;
+  }
+}
+.input_description {
+  /deep/ .el-textarea__inner {
+    padding: 5px 50px 5px 10px !important;
+  }
+  /deep/ .el-input__count {
+    right: 18px;
+  }
+}

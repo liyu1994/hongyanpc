@@ -1,0 +1,447 @@
+// element 样式补丁
+
+.v-modal {
+  opacity: .15;
+}
+
+.el-breadcrumb__inner, .el-breadcrumb__inner a{
+  font-weight: 400!important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width{
+ .el-button--mini{
+   padding: 7px 10px;
+   width: 60px;
+ }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+// 暂时性解决dialog 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+
+  &__body {
+    position: relative;
+  }
+  &__move {
+    @extend %full;
+    user-select: none;
+    transition: all 0.1s;
+  }
+}
+
+// 文章页textarea修改样式
+.article-textarea {
+  textarea {
+    padding-right: 40px;
+    resize: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #bfcbd9;
+  }
+}
+
+// element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu{
+  a {
+    display: block
+  }
+}
+
+.el-card {
+  &.is-always-shadow {
+    box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
+  }
+  &.is-hover-shadow {
+    &:hover {
+      box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
+    }
+  }
+}
+
+.el-menu--horizontal {
+  border-bottom: none !important;
+}
+
+.el-tabs__item:focus.is-active.is-focus:not(:active) {
+  box-shadow: none !important;
+}
+
+// refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+
+// 日期
+.el-date-picker table {
+  margin-top: 10px;
+}
+.el-year-table td {
+  padding: 0px 3px;
+}
+.el-date-range-picker.has-sidebar {
+  width: 630px;
+}
+.el-month-table td {
+  .cell {
+    width: 50px;
+  }
+  &.start-date .cell &:hover,
+  &.end-date .cell &:hover{
+    color: #fff!important;
+  }
+}
+.el-date-range-picker {
+  width: 520px;
+}
+.el-date-range-picker .el-picker-panel__body {
+   width: 400px;
+}
+.el-date-picker {
+  width: 240px;
+}
+.el-date-picker__header {
+  margin-bottom: 0;
+}
+.el-date-picker .el-picker-panel__content {
+  width: 196px;
+  margin-top: 0;
+}
+.el-date-table td {
+  padding: 0;
+  height: 26px;
+}
+.el-date-table td div {
+  height: 26px;
+}
+.el-date-table td span {
+  line-height: 26px;
+}
+.el-popover {
+  border-radius: 0px;
+  border: 1px solid $color-border-2;
+}
+
+// input
+.el-input--medium {
+  .el-input__inner {
+    border-radius: 0px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .el-textarea__inner {
+    border-radius: 0px;
+  }
+  &:not(.el-input--prefix) {
+    .el-input__inner {
+      padding: 0 10px;
+    }
+  }
+  .el-input__icon {
+    line-height: 30px;
+  }
+}
+
+// 按钮
+.el-button--medium {
+  padding: 7px 20px;
+}
+
+.el-dialog__headerbtn {
+  top: 18px;
+}
+
+.el-dialog__title {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.el-dialog__footer {
+  background-color: #eceef2;
+  text-align: center;
+  padding: 15px 15px 15px;
+}
+.setting-dialog {
+  .el-form-item {
+    margin-bottom: 0px;
+  }
+  .el-autocomplete {
+    width: 100%;
+  }
+  /* .el-input__icon {
+    line-height: 30px;
+  }
+  .el-form-item+.el-form-item {
+    margin-top: 12px;
+  } */
+  .el-form-item.is-required .el-form-item__label:before {
+    display: inline-block;
+  }
+  .el-dialog__body {
+    padding: 12px 16px;
+  }
+  /* .el-form-item__content {
+    line-height: 30px;
+  } */
+  .el-form-item__label {
+    font-weight: 500;
+    color: $color-text-main;
+    // line-height: 30px;
+    &:after {
+      content: ":";
+      margin: 0 8px 0 2px;
+      position: relative;
+      top: -0.5px;
+    }
+  }
+  &:not(.error) .el-form-item__error {
+    // position: relative;
+    margin-left: 7px;
+    transform: translate(0,-50%);
+    z-index: 2;
+    // top: 50%;
+    top: calc(50% + 12px);
+    left: auto;
+    width: 110px;
+    padding: 5px 12px;
+    line-height: 15px;
+    color: #f60;
+    font-size: 12px;
+    background: #F9E3D4;
+    border: 1px solid #f60;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    text-align: left;
+    right: -146px;
+    word-break: break-word;
+    &:before {
+      left: -7px;
+      margin-top: -7px;
+      border-color: transparent #f60 transparent transparent;
+      border-width: 7px 7px 7px 0;
+    }
+    &:after {
+      left: -6px;
+      margin-top: -6px;
+      border-color: transparent #F9E3D4 transparent transparent;
+      border-width: 6px 6px 6px 0;
+    }
+    &:before, &:after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      line-height: 0;
+      border-style: dashed solid dashed dashed;
+      display: inline-block;
+      content: '';
+      overflow: hidden;
+      top: 50%;
+    }
+  }
+  .el-select:not(.spec-multiple-select) {
+    width: 100%;
+    .el-input--medium .el-input__inner {
+      height: 30px !important;
+      line-height: 30px;
+    }
+    .el-input--medium .el-input__icon {
+      line-height: 30px;
+    }
+    /* .el-select__tags {
+      top: 0px;
+      height: 30px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      transform: translateY(0);
+    } */
+  }
+  .driverTablePadding {
+    padding: 7px 0;
+    padding-right: 5px;
+    .el-row+.el-row {
+      margin-top: 12px;
+    }
+    .el-form-item__label {
+      padding: 0px;
+    }
+  }
+  .el-input.is-disabled .el-input__inner {
+    height: 30px !important;
+  }
+  .text {
+    line-height: 20px;
+    color: #cccccc;
+    padding-bottom: 26px;
+  }
+  .borderTable {
+    td {
+      padding: 0;
+      overflow: visible;
+    }
+    .el-input__inner {
+      height: 36px !important;
+      line-height: 36px;
+      border-color: $color-border-white;
+      -webkit-transition: none;
+      transition: none;
+      &:focus, &:hover {
+        border-color: #0b8bef;
+      }
+    }
+  }
+  .el-table .cell {
+    overflow: hidden;
+  }
+  .el-table {
+    margin-top: 14px;
+    @include clearfix;
+    thead {
+      tr {
+        background-color: $color-bg-table-thead;
+        th {
+          padding: 0;
+        }
+        .cell {
+          text-align: center;
+          font-size: 14px;
+          color: $color-text-main;
+          height: 32px;
+          line-height: 32px;
+        }
+      }
+    }
+    tbody {
+      td {
+        padding: 0;
+      }
+      .cell {
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        font-size: 12px;
+        color: #606266;
+      }
+    }
+    .el-radio__label {
+      display: none;
+    }
+  }
+  .input {
+    width: 100px;
+    .el-input__inner {
+      height: 16px;
+      line-height: 16px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      padding: 0px;
+    }
+  }
+}
+/* 竞品对标弹窗样式 */
+// .setting-dialog {
+//   &.benchmarking {
+//     .el-dialog__header{
+//       border-top: none;
+//       border-bottom: none;
+//     }
+//   }
+// }
+
+// 上传图片
+.upload-mini {
+  .el-upload--picture-card {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+  .el-upload--picture-card i {
+    font-size: 22px;
+  }
+  .el-upload-list__item {
+    width: 100px;
+    height: 100px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .el-upload-list__item-thumbnail {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  .el-upload__tip {
+    clear: both;
+    display: block;
+  }
+}
+
+// loading 增加滤镜
+.el-loading-parent--relative {
+  opacity: .7;
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  -webkit-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=1, MakeShadow=false)";
+  filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=1, MakeShadow=false)";
+  position: relative;
+  pointer-events: none;
+}
