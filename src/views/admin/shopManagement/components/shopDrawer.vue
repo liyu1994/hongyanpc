@@ -26,7 +26,6 @@
                 style="width: 100%"
                 placeholder="请输入商品编号"
                 clearable
-                maxlength="30"
               />
             </el-form-item>
           </div>
@@ -43,9 +42,7 @@
                 v-model.trim="form.goodsName"
                 style="width: 100%"
                 placeholder="请输入商品名称"
-                :disabled="type === 'update'"
                 clearable
-                maxlength="30"
               />
             </el-form-item>
           </div>
@@ -83,7 +80,6 @@
             type="textarea"
             style="width: 100%"
             placeholder="请输入商品描述"
-            :disabled="type === 'update'"
             rows="4"
             maxlength="300"
           />

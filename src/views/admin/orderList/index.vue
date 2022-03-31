@@ -187,8 +187,8 @@
               fixed="right"
             >
               <template slot-scope="{ row }">
-                <el-button v-if="row.paymentMode === 0 &&row.orderStatus === 1" type="text" size="mini" @click="handleDelivery(row)">去发货</el-button>
-                <el-button v-if="row.paymentMode === 1 && row.writeOff === 1" type="text" size="mini" @click="handleDelivery(row)">去发货</el-button>
+                <el-button v-if="row.paymentMode === 0 && row.orderStatus === 1" type="text" size="mini" @click="handleDelivery(row)">去发货</el-button>
+                <el-button v-if="row.paymentMode === 1 && row.writeOff === 1 && row.orderStatus === 1" type="text" size="mini" @click="handleDelivery(row)">去发货</el-button>
                 <el-button v-if="row.writeOff === 0" type="text" size="mini" @click="handleVerification(row)">核销</el-button>
               </template>
             </el-table-column>
