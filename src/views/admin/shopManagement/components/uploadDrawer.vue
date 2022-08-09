@@ -86,9 +86,7 @@ export default {
   methods: {
     // 初始化
     async init() {
-      goodsCategoryList({
-        showInHome: 0
-      }).then(res => {
+      goodsCategoryList().then(res => {
         this.option = res.data || []
       })
       // this.option = this.dialogForm.option || []

@@ -199,6 +199,7 @@ export default {
         })
     },
     handleClick() {
+      this.$refs['form'].resetFields()
       this.form.driverName = ''
       this.form.driverMobile = ''
       this.form.logisticsCompany = ''

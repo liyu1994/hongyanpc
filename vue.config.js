@@ -97,7 +97,8 @@ const webpackConfig = module.exports = {
     proxy: {
       '/mall': {
         // 目标 API 地址
-        target: 'https://fp.hongyanfuli.com/', // 联调
+        // target: 'https://fp.hongyanfuli.com/', // 线上
+        target: 'http://175.24.203.118/', // 测试
         // 如果要代理 websockets
         ws: true,
         // 将主机标头的原点更改为目标URL
@@ -105,7 +106,8 @@ const webpackConfig = module.exports = {
       },
       '/group1': {
         // 目标 API 地址
-        target: 'https://jd.hongyanfuli.com/', // 联调
+        // target: 'https://jd.hongyanfuli.com/', // 联调
+        target: 'http://175.24.203.118/', // 测试
         // 如果要代理 websockets
         ws: true,
         // 将主机标头的原点更改为目标URL

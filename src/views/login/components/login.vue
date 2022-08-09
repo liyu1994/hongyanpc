@@ -14,7 +14,7 @@
         </span>
       </el-form-item>
       <div style="margin-top: 20px">
-        <el-checkbox v-model="isRemember">记住密码</el-checkbox>
+        <el-checkbox v-model="isRemember">记住账号</el-checkbox>
       </div>
       <el-button type="primary" style="width:100%;margin-bottom:20px;" :loading="loading" @click.native.prevent="handleLogin">登录</el-button>
     </div>

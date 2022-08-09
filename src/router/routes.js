@@ -2,6 +2,7 @@ import Layout from '@/views/layout'
 
 import $orderList from './modules/admin/orderList'
 import $shopManagement from './modules/admin/shopManagement'
+import $invoiceManagement from './modules/admin/invoiceManagement'
 import $memberManagement from './modules/admin/memberManagement'
 import $bannerManagement from './modules/admin/bannerManagement'
 
@@ -46,6 +47,7 @@ export const constantRouterMap = [
   },
   $orderList,
   $shopManagement,
+  $invoiceManagement,
   $memberManagement,
   $bannerManagement
 ]

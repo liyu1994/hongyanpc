@@ -163,3 +163,20 @@ export function upLoad(file) {
   })
 }
 
+// 后台管理发票列表
+export function getInvoiceList(data) {
+  return request({
+    url: '/api/order/getInvoiceList',
+    method: 'post',
+    data
+  })
+}
+
+// 完成开票
+export function completeInvoice(query) {
+  return request({
+    url: '/api/order/completeInvoice',
+    method: 'get',
+    params: query
+  })
+}

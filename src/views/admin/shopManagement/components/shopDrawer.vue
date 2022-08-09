@@ -214,9 +214,7 @@ export default {
     async init() {
       this.type = this.dialogForm.type || 'create'
       // this.option = this.dialogForm.option || []
-      goodsCategoryList({
-        showInHome: 0
-      }).then(res => {
+      goodsCategoryList().then(res => {
         this.option = res.data || []
       })
       if (this.type === 'update') {

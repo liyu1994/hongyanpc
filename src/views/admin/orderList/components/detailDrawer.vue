@@ -37,6 +37,26 @@
           <div class="content">{{ detailData.shippingAddressVo.consigneeRegionName }}&nbsp;{{ detailData.shippingAddressVo.consigneeAddress }}</div>
         </div>
       </div>
+      <div v-if="detailData.deliveryType === 1" class="group" style="margin-top: 16px">
+        <div class="item" flex="dir:top main:center">
+          <div class="title">配送信息</div>
+          <div class="content">
+            <p><span>配送方式</span>自有车辆配送</p>
+            <p><span>司机名称</span>{{ detailData.driverName }}</p>
+            <p><span>司机联系方式</span>{{ detailData.driverMobile }}</p>
+          </div>
+        </div>
+      </div>
+      <div v-if="detailData.deliveryType === 2" class="group" style="margin-top: 16px">
+        <div class="item" flex="dir:top main:center">
+          <div class="title">配送信息</div>
+          <div class="content">
+            <p><span>配送方式</span>物流配送</p>
+            <p><span>物流公司</span>{{ detailData.logisticsCompany }}</p>
+            <p><span>快递单号</span>{{ detailData.trackingNumber }}</p>
+          </div>
+        </div>
+      </div>
     </el-form>
 
     <div slot="footer" class="admin-text-center">
@@ -174,6 +194,17 @@ export default {
       color: #333;
       font-size: 16px;
       margin-top: 4px;
+      p {
+        line-height: 14px;
+        font-size: 14px;
+        span {
+          display: inline-block;
+          width: 100px;
+          color: #666;
+          font-size: 14px;
+          margin-right: 20px;
+        }
+      }
     }
   }
   .item + .item {

@@ -317,9 +317,16 @@ export default {
         id: row.id,
         status: row.goodsStatus === 0 || row.goodsStatus === 2 ? 1 : 2
       }
-      upOrDownStand(data).then(res => {
-        this.$message.success('操作成功')
-        this.handleFilter()
+      this.$confirm(row.goodsName, `是否确认${data.status === 1 ? '上架' : '下架'}?`, '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        upOrDownStand(data).then(res => {
+          this.$message.success('操作成功')
+          this.handleFilter()
+        })
+      }).catch(() => {
       })
     },
     // 详情
